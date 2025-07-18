@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture the Flag 2022</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Launch Page -->
+    <div class="launch-page content" id="launchPage">
+        <div class="header">
+            <img id="logo" src="https://drive.google.com/uc?export=view&id=1oaAUszh_f8kc6TQnlJSjeggGBE7Eqzd3" alt="CTF Logo">
+            <h1>Capture<br>the Flag</h1>
+            <h3>2022</h3>
+        </div>
+
+        <a class="btn" onclick="startGame()" id="startBtn">Let's Go</a>
+
+        <div class="credit">
+            <p>Hosted By</p>
+            <div class="imgs">
+                <a href="https://www.sfu.ca/computing/wics/" target="_blank">
+                    <img class="hostedLogo" src="https://drive.google.com/uc?export=view&id=1tQRfKN2zWwO6wdjAFUw9_o5pDT8Wp_L2" alt="WICS Logo">
+                </a>
+                <a href="https://trycatch.cs.sfu.ca/" target="_blank">
+                    <img class="hostedLogo" src="https://drive.google.com/uc?export=view&id=1lA6YP2-4jO5V45-rlBLckZW8betotd4X" alt="TryCatch Logo">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flag Page -->
+    <div class="flag-page" id="flagPage">
+        <div class="content">
+            <div class="flag-header">
+                <h1 id="flagTitle">Flag 1</h1>
+                <h3 id="flagProgress">1/10</h3>
+            </div>
+            
+            <div class="question-section">
+                <p id="flagQuestion">What is the answer to this question?</p>
+                
+                <div class="hint-section">
+                    <a class="hintBtn" onclick="showHint()">
+                        <div>
+                            <img id="lightbulbIcon" src="https://drive.google.com/uc?export=view&id=1D4io4HEzDLa_Ty6xAf7KYNxHUKpSU6Lo" alt="Hint">
+                            <p>Hint</p>
+                        </div>
+                    </a>
+                    <p class="hint" id="flagHint">This is a hint for the current flag.</p>
+                </div>
+            </div>
+            
+            <div class="answer-section">
+                <div class="input-group">
+                    <input type="text" id="answerInput" placeholder="Enter your answer">
+                    <button onclick="checkAnswer()">Submit</button>
+                </div>
+            </div>
+            
+            <div class="url-display">
+                <p>Current URL: <span id="currentUrl">?page=flag&pageId=flag1</span></p>
+            </div>
+        </div>
+        
+        <div class="footer-logos">
+            <a href="https://www.sfu.ca/computing/wics/" target="_blank">
+                <img class="hostedLogo floatLeft" src="https://drive.google.com/uc?export=view&id=1tQRfKN2zWwO6wdjAFUw9_o5pDT8Wp_L2" alt="WICS Logo">
+            </a>
+            <a href="https://trycatch.cs.sfu.ca/" target="_blank">
+                <img class="hostedLogo floatRight" src="https://drive.google.com/uc?export=view&id=1lA6YP2-4jO5V45-rlBLckZW8betotd4X" alt="TryCatch Logo">
+            </a>
+        </div>
+    </div>
+
+    <!-- Finish Page -->
+    <div class="finish-page" id="finishPage">
+        <div class="content">
+            <div class="finish-header">
+                <h1>CONGRATS</h1>
+                <h2>You have completed the challenge!</h2>
+            </div>
+
+            <div class="form-section">
+                <h2>Submit your info to enter a draw for prizes</h2>
+                <div class="form-group">
+                    <div class="input-row">
+                        <input type="text" id="firstName" placeholder="First Name">
+                        <input type="text" id="lastName" placeholder="Last Name">
+                    </div>
+                    <div class="input-row">
+                        <input type="email" id="email" placeholder="email@email.com">
+                    </div>
+                    <a id="submitBtn" onclick="submitInfo()">Submit</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-logos">
+            <a href="https://www.sfu.ca/computing/wics/" target="_blank">
+                <img class="hostedLogo floatLeft" src="https://drive.google.com/uc?export=view&id=1tQRfKN2zWwO6wdjAFUw9_o5pDT8Wp_L2" alt="WICS Logo">
+            </a>
+            <a href="https://trycatch.cs.sfu.ca/" target="_blank">
+                <img class="hostedLogo floatRight" src="https://drive.google.com/uc?export=view&id=1lA6YP2-4jO5V45-rlBLckZW8betotd4X" alt="TryCatch Logo">
+            </a>
+        </div>
+    </div>
+
+    <!-- Error Page -->
+    <div class="error-page" id="errorPage">
+        <div class="content">
+            <div class="error-message">
+                <h2>Oops, that's not the correct answer. Try again!</h2>
+                <a class="back-btn" onclick="goBackToFlag()">Try Again</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

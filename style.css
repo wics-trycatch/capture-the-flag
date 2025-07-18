@@ -1,0 +1,499 @@
+/* Font imports */
+@font-face {
+    font-family: SilkFlower;
+    src: url("https://drive.google.com/uc?export=download&id=1WFD0EzL3e5UnLL3Kt76hewDAmXX20gSK");
+}
+
+/* Global styles */
+* {
+    font-weight: normal !important;
+    color: #546671;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.content {
+    margin: auto;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Launch Page Styles */
+.launch-page {
+    display: block;
+}
+
+.launch-page.hidden {
+    display: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#logo {
+    width: 130px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Yeseva One', serif;
+    color: #546671;
+    font-size: 60px;
+    margin: 0;
+    line-height: 1.1;
+    font-weight: normal !important;
+}
+
+.header h3 {
+    color: #A0DADB;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: normal !important;
+}
+
+.btn {
+    background-color: #D9D9D9;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #546671;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 30px auto;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c9c9c9;
+}
+
+.credit {
+    margin-top: 50px;
+}
+
+.credit p {
+    font-size: 18px;
+    color: #546671;
+    margin-bottom: 20px;
+}
+
+.imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.imgs img {
+    width: 150px;
+    height: auto;
+}
+
+/* Flag Page Styles */
+.flag-page {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 120px;
+}
+
+.flag-page.active {
+    display: flex;
+}
+
+.flag-header {
+    margin-bottom: 30px;
+}
+
+.flag-page h1 {
+    margin-bottom: 5px;
+    font-size: 48px;
+    font-family: 'Yeseva One', serif;
+}
+
+.flag-page h3 {
+    margin-top: 0;
+    font-weight: normal !important;
+    color: #A0DADB;
+    font-size: 18px;
+}
+
+.question-section {
+    margin-bottom: 40px;
+}
+
+.question-section p {
+    font-size: 20px;
+    margin: 30px 0;
+    line-height: 1.4;
+}
+
+.hint-section {
+    margin: 30px 0;
+}
+
+.hintBtn {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hintBtn div {
+    background-color: #D9D9D9;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #546671;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.hintBtn:hover div {
+    background-color: #c9c9c9;
+}
+
+.hintBtn #lightbulbIcon {
+    height: 20px;
+    width: 20px;
+}
+
+.hintBtn p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.hint {
+    display: none;
+    font-size: 16px;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #A0DADB;
+}
+
+.answer-section {
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.input-group input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #D9D9D9;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #A0DADB;
+}
+
+.input-group button {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #D9D9D9;
+    color: #546671;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #c9c9c9;
+}
+
+.url-display {
+    margin-top: 20px;
+}
+
+.url-display p {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+}
+
+/* Finish Page Styles */
+.finish-page {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 120px;
+}
+
+.finish-page.active {
+    display: flex;
+}
+
+.finish-header {
+    margin-bottom: 40px;
+}
+
+.finish-page h1 {
+    font-size: 48px;
+    font-family: 'Yeseva One', serif;
+    margin-bottom: 20px;
+}
+
+.finish-page h2 {
+    font-weight: normal !important;
+    color: #546671;
+    font-size: 20px;
+    margin: 0;
+}
+
+.form-section {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-section h2 {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #D9D9D9;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-row input:focus {
+    outline: none;
+    border-color: #A0DADB;
+}
+
+#submitBtn {
+    background-color: #D9D9D9;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #546671;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover {
+    background-color: #c9c9c9;
+}
+
+/* Error Page Styles */
+.error-page {
+    display: none;
+    text-align: center;
+}
+
+.error-page.active {
+    display: flex;
+}
+
+.error-message {
+    margin: auto;
+}
+
+.error-page h2 {
+    color: #546671;
+    font-weight: normal !important;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.back-btn {
+    background-color: #D9D9D9;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #546671;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #c9c9c9;
+}
+
+/* Footer Logo Styles */
+.footer-logos {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    pointer-events: none;
+}
+
+.hostedLogo {
+    position: absolute;
+    bottom: 20px;
+    width: 80px;
+    height: auto;
+    pointer-events: all;
+}
+
+.hostedLogo.floatLeft {
+    left: 20px;
+}
+
+.hostedLogo.floatRight {
+    right: 20px;
+}
+
+/* Special styling for flag 5 text color hint */
+.flag-page #flagQuestion.special-color {
+    color: #546671;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+    
+    .flag-page h1 {
+        font-size: 36px;
+    }
+    
+    .finish-page h1 {
+        font-size: 36px;
+    }
+    
+    .imgs {
+        gap: 20px;
+    }
+    
+    .imgs img {
+        width: 120px;
+    }
+    
+    .input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input-group input {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+    
+    .input-group button {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .input-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hostedLogo {
+        width: 60px;
+    }
+    
+    .hostedLogo.floatLeft {
+        left: 10px;
+    }
+    
+    .hostedLogo.floatRight {
+        right: 10px;
+    }
+    
+    .flag-page,
+    .finish-page {
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    .flag-page h1 {
+        font-size: 28px;
+    }
+    
+    .finish-page h1 {
+        font-size: 28px;
+    }
+    
+    .imgs img {
+        width: 100px;
+    }
+    
+    .question-section p {
+        font-size: 18px;
+    }
+    
+    .credit p {
+        font-size: 16px;
+    }
+    
+    .finish-page h2 {
+        font-size: 18px;
+    }
+    
+    .form-section h2 {
+        font-size: 16px;
+    }
+}
